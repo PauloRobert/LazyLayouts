@@ -74,7 +74,7 @@ data class Produto(val id: Int, val nome: String, val preco: Double, val imagem:
 // Estado imutável que encapsula a lista de produtos da UI.
 data class ProdutoState(val produtos: List<Produto> = emptyList())
 
-// Enumeração que define os tipos de visualização disponíveis.
+// Enumeração que define os tipos de visualização disponíveis (Coluna, Linha, Grade).
 enum class ViewType { COLUMN, ROW, GRID }
 
 class ProdutoViewModel : ViewModel() {
