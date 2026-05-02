@@ -154,12 +154,12 @@ fun ListaSimples(modifier: Modifier = Modifier, viewModel: ProdutoViewModel = vi
             key = { produto -> produto.id }
         )
         { produto ->
-            ProdutoCard(produto) {
+            ProdutoCard(produto, onCLick = {
                 Toast.makeText(
                     contexto,
                     "Clicou em ${produto.nome}",
                     Toast.LENGTH_LONG).show()
-            }
+            })
         }
     }
 
